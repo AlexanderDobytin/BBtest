@@ -1,0 +1,83 @@
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid {
+  max-width: 1430px;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url('../fonts/9404.woff2') format('woff2'), url('../fonts/SegoeUI.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url('../fonts/10389.woff2') format('woff2'), url('../fonts/SegoeUI-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  color: #000000;
+  font-family: "Segoe UI";
+  font-weight: 400;
+}
+h1 {
+  color: #000000;
+  font-family: "Segoe UI";
+  font-size: 122px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 72px;
+}
+.b-header {
+  padding: 50px 0 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.b-header-logo__title {
+  font-size: 44px;
+}
+.b-header-logo__subtitle {
+  font-size: 20px;
+}
+.b-header-menu {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.b-header-social {
+  display: flex;
+  align-items: center;
+}
+.b-header-social__item {
+  margin: 0 15px;
+}
+.b-header-social__item:last-child {
+  margin-right: 0px;
+  margin-left: 6px;
+}
+.b-navbar {
+  margin-right: 23px;
+  display: flex;
+  justify-content: flex-end;
+}
+.b-navbar__link {
+  color: #0064aa;
+  font-size: 24px;
+}
+.b-navbar__link:hover,
+.b-navbar__link:focus,
+.b-navbar__link--active {
+  color: #0064aa;
+  text-decoration: none;
+}
+.b-navbar__element {
+  margin: 0 19px;
+}

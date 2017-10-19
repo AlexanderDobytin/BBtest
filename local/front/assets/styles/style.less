@@ -1,0 +1,90 @@
+@import 'mixins.less';
+.container-fluid {
+    max-width: 1430px;
+}
+
+@text-color: #000000;
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/9404.woff2') format('woff2'), url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/10389.woff2') format('woff2'), url('../fonts/SegoeUI-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    color: @text-color;
+    font-family: "Segoe UI";
+    font-weight: 400;
+}
+
+h1 {
+    color: #000000;
+    font-family: "Segoe UI";
+    font-size: 122px;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 72px;
+}
+
+.b-header {
+    & {
+        padding: 50px 0 45px;
+        .flex-between;
+        align-items: center
+    }
+}
+
+.b-header-logo {
+    &__title {
+        font-size: 44px;
+    }
+    &__subtitle {
+        font-size: 20px;
+    }
+}
+
+.b-header-menu {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px
+}
+
+.b-header-social {
+    & {
+        display: flex;
+        align-items: center
+    }
+    &__item {
+        margin: 0 15px;
+    }
+    &__item:last-child {
+        margin-right: 0px;
+        margin-left: 6px
+    }
+}
+
+.b-navbar {
+    & {
+        margin-right: 23px;
+    }
+    &__link {
+        color: #0064aa;
+        font-size: 24px;
+        .hover(#0064aa,
+        none);
+    }
+    &__element {
+        margin: 0 19px;
+    }
+    & {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
