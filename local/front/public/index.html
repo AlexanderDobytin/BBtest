@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Union</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/vendor/vendor.css">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/vendor/vendor.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
   </head>
   <body>
@@ -29,8 +29,77 @@
       <main class="b-page container-fluid">
         <section class="b-catalog">
           <h1>Путеводитель </h1>
-          <div class="b-catalog-city"><span>Выберите </span><a href="" class="b-catalog-city__link i-citySelect"> город</a></div>
+          <div class="b-catalog-city"><span>Выберите </span><a href="" class="b-catalog-city__link i-citySelect">город</a>
+            <div class="b-catalog-city__list">
+              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог    </a></div>
+              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог     </a></div>
+              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a></div>
+            </div>
+          </div>
+          <div class="b-catalog__container row">
+            <div class="b-catalog__list col-xs-9">
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-1.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title">Mr. Cat</div>
+                                  <div class="b-catalog-item__subtitle">Астана</div></a></div>
+                            </div>
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-2.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title">Челюскинцев</div>
+                                  <div class="b-catalog-item__subtitle">Воронеж</div></a></div>
+                            </div>
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-3.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title">Клуб Полезного Действия</div>
+                                  <div class="b-catalog-item__subtitle">Санкт-Петербург</div></a></div>
+                            </div>
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-4.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title">Freelance Café</div>
+                                  <div class="b-catalog-item__subtitle">Екатеринбург</div></a></div>
+                            </div>
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-5.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title">Лаборатория Касперского</div>
+                                  <div class="b-catalog-item__subtitle">Новосибирск</div></a></div>
+                            </div>
+                            <div class="b-catalog-item col-xs-4">
+                              <div style="background:url(../images/catalog-pix-6.jpg) no-repeat 50% /cover" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+                                  <div class="b-catalog-item__title"> IT-office</div>
+                                  <div class="b-catalog-item__subtitle">Кемерово</div></a></div>
+                            </div>
+            </div>
+            <div class="b-catalog__addColumn col-xs-3">
+              <div class="b-catalog-new">
+                <div class="b-catalog-new__container"><img src="images/new-icon.png" alt="newIcon" class="b-catalog-new__icon">
+                  <div class="b-catalog-new__title">Добавьте <br>свое место!</div><a href="" class="b-catalog-new__submit">Добавить место</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+        <div id="hidden-content" class="b-popUp">
+          <form role="form" class="b-popUp__form">
+            <div class="b-popUp__line form-group">
+              <label class="b-popUp__label">Город
+                <input type="text" name="city" class="b-popUp__input form-control">
+              </label>
+            </div>
+            <div class="b-popUp__line form-group">
+              <label class="b-popUp__label">Название
+                <input type="text" name="name" class="b-popUp__input form-control">
+              </label>
+            </div>
+            <div class="b-popUp__line form-group">
+              <label class="b-popUp__label">Ссылка на картинку
+                <input type="text" name="link" class="b-popUp__input form-control">
+              </label>
+            </div>
+            <div class="b-popUp__line form-group">
+              <input type="submit" value="Добавить" class="btn btn-success">
+            </div>
+          </form>
+        </div>
       </main>
     </main>
   </body>

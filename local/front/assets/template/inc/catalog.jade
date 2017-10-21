@@ -3,4 +3,65 @@ main.b-page.container-fluid
 		h1 Путеводитель 
 		.b-catalog-city
 			span Выберите 
-			a(href="").b-catalog-city__link.i-citySelect  город
+			a(href="").b-catalog-city__link.i-citySelect город
+			.b-catalog-city__list
+				.b-catalog-city__column.col-xs-4
+					a(href="").b-catalog-city__city Минск
+					a(href="").b-catalog-city__city Нижний Новгород
+					a(href="").b-catalog-city__city Новосибирск
+					a(href="").b-catalog-city__city Пермь
+					a(href="").b-catalog-city__city Ростов-на-Дону 
+					a(href="").b-catalog-city__city Санкт-Петербург 
+					a(href="").b-catalog-city__city Самара
+					a(href="").b-catalog-city__city Казань
+					a(href="").b-catalog-city__city Таганрог    
+				.b-catalog-city__column.col-xs-4
+					a(href="").b-catalog-city__city Минск
+					a(href="").b-catalog-city__city Нижний Новгород
+					a(href="").b-catalog-city__city Новосибирск
+					a(href="").b-catalog-city__city Пермь
+					a(href="").b-catalog-city__city Ростов-на-Дону 
+					a(href="").b-catalog-city__city Санкт-Петербург 
+					a(href="").b-catalog-city__city Самара
+					a(href="").b-catalog-city__city Казань
+					a(href="").b-catalog-city__city Таганрог     
+				.b-catalog-city__column.col-xs-4
+					a(href="").b-catalog-city__city Минск
+					a(href="").b-catalog-city__city Нижний Новгород
+					a(href="").b-catalog-city__city Новосибирск
+					a(href="").b-catalog-city__city Пермь
+					a(href="").b-catalog-city__city Ростов-на-Дону 
+		.b-catalog__container.row
+			.b-catalog__list.col-xs-9
+				mixin Catalog-item(name,city,img) 
+
+					.b-catalog-item.col-xs-4
+						.b-catalog-item__container(style="background:url(../images/#{img}) no-repeat 50% /cover")
+							a(href="").b-catalog-item__textblock
+								.b-catalog-item__title=name
+								.b-catalog-item__subtitle=city
+				+Catalog-item('Mr. Cat','Астана','catalog-pix-1.jpg')
+				+Catalog-item('Челюскинцев','Воронеж','catalog-pix-2.jpg')
+				+Catalog-item('Клуб Полезного Действия','Санкт-Петербург','catalog-pix-3.jpg')
+				+Catalog-item('Freelance Café','Екатеринбург','catalog-pix-4.jpg')
+				+Catalog-item('Лаборатория Касперского','Новосибирск','catalog-pix-5.jpg')
+				+Catalog-item(' IT-office','Кемерово','catalog-pix-6.jpg')
+			.b-catalog__addColumn.col-xs-3
+				.b-catalog-new
+					.b-catalog-new__container
+						img(src="images/new-icon.png" alt="newIcon").b-catalog-new__icon
+						.b-catalog-new__title Добавьте <br>свое место!
+						a(href="").b-catalog-new__submit Добавить место
+	.b-popUp#hidden-content
+		form(role="form").b-popUp__form
+			.b-popUp__line.form-group
+				label.b-popUp__label Город
+					input(type="text" name="city").b-popUp__input.form-control
+			.b-popUp__line.form-group
+				label.b-popUp__label Название
+					input(type="text" name="name").b-popUp__input.form-control
+			.b-popUp__line.form-group
+				label.b-popUp__label Ссылка на картинку
+					input(type="text" name="link").b-popUp__input.form-control
+			.b-popUp__line.form-group
+				input(type='submit' value="Добавить").btn.btn-success

@@ -9,6 +9,7 @@
 }
 .container-fluid {
   max-width: 1430px;
+  min-width: 1200px;
 }
 @font-face {
   font-family: "Segoe UI";
@@ -26,6 +27,7 @@ body {
   color: #000000;
   font-family: "Segoe UI";
   font-weight: 400;
+  background: url(../images/bg.png) no-repeat 50%;
 }
 h1 {
   color: #000000;
@@ -33,7 +35,16 @@ h1 {
   font-size: 122px;
   font-weight: 300;
   margin-top: 0px;
-  margin-bottom: 72px;
+  margin-bottom: 75px;
+}
+a {
+  color: #0064aa;
+}
+a:hover,
+a:focus,
+a--active {
+  color: #0064aa;
+  text-decoration: none;
 }
 .b-header {
   padding: 50px 0 45px;
@@ -80,4 +91,182 @@ h1 {
 }
 .b-navbar__element {
   margin: 0 19px;
+}
+.b-catalog-city {
+  color: #000000;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 40px;
+  display: block;
+  margin-bottom: 60px;
+}
+.b-catalog-city__link {
+  position: relative;
+  display: inline-block;
+}
+.b-catalog-city__link:after {
+  content: '';
+  left: 50%;
+  margin-left: -22px;
+  margin-top: 13px;
+  z-index: 90;
+  background: url(../images/city-select-pix-1.png) no-repeat 50%;
+  width: 37px;
+  height: 44px;
+  display: none;
+  position: absolute;
+}
+.b-catalog-city:hover .b-catalog-city__link:after {
+  display: block;
+}
+.b-catalog-city:hover .b-catalog-city__link:before {
+  display: block;
+}
+.b-catalog-city:hover .b-catalog-city__list {
+  display: block;
+}
+.b-catalog-city__list {
+  width: 1043px;
+  display: none;
+  position: absolute;
+  border: 1px solid #161616;
+  background-color: #ffffff;
+  padding: 50px;
+  z-index: 10;
+  margin-top: 45px;
+}
+.b-catalog-city__link:before {
+  width: 100%;
+  height: 60px;
+  z-index: 91;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  margin-top: 40px;
+  content: "";
+  display: block;
+}
+.b-catalog-city__city {
+  color: #0064aa;
+  display: block;
+  font-size: 24px;
+  line-height: 40px;
+}
+.b-catalog {
+  padding-bottom: 420px;
+}
+.b-catalog__container {
+  display: flex;
+  align-items: stretch;
+}
+.b-catalog__list {
+  margin-left: -14px;
+  margin-right: -14px;
+  width: 77%;
+}
+.b-catalog .b-catalog__addColumn {
+  margin-left: -14px;
+  margin-right: -14px;
+  width: 25%;
+  padding-right: 0px;
+  padding-left: 28px;
+}
+.b-catalog-new {
+  border-radius: 2px;
+  width: 100%;
+  background-color: #eeeeee;
+}
+.b-catalog-new__container {
+  padding: 13px 31px 33px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.b-catalog-new__title {
+  color: #000000;
+  margin: 5px 0;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 40px;
+}
+.b-catalog-new__submit {
+  height: 68px;
+  box-shadow: inset 0 5px 0 #a7e639;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 24px;
+  width: 100%;
+  line-height: 54px;
+  text-align: center;
+  border: 2px solid #4f760b;
+  background-color: #8bc02e;
+  display: block;
+}
+.b-catalog-new__submit:hover,
+.b-catalog-new__submit:focus,
+.b-catalog-new__submit--active {
+  color: #fff;
+  text-decoration: none;
+}
+.b-catalog-item {
+  margin-bottom: 28px;
+  padding: 0 14px;
+}
+.b-catalog-item__container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 2px;
+}
+.b-catalog-item__container:before {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0px;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0px;
+  position: absolute;
+}
+.b-catalog-item__title {
+  color: #ffffff;
+  font-size: 24px;
+  position: relative;
+  z-index: 5;
+  line-height: 32px;
+}
+.b-catalog-item__subtitle {
+  color: #ffffff;
+  position: relative;
+  z-index: 5;
+  font-size: 18px;
+  line-height: 40px;
+}
+.b-catalog-item__textblock {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+.b-catalog-item__textblock:before {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0px;
+  transition: .3s;
+  content: '';
+  background-color: #8bc02e;
+  top: 100%;
+  position: absolute;
+}
+.b-catalog-item__textblock:hover:before {
+  top: 0px;
+}
+.b-popUp {
+  display: none;
 }
