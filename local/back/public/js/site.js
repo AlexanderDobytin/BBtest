@@ -4,11 +4,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var item = function () {
-    function item() {
+var Item = function () {
+    function Item() {
         var _this = this;
 
-        _classCallCheck(this, item);
+        _classCallCheck(this, Item);
 
         this.height();
         $('.b-catalog-new').stick_in_parent();
@@ -17,7 +17,7 @@ var item = function () {
         });
     }
 
-    _createClass(item, [{
+    _createClass(Item, [{
         key: 'height',
         value: function height() {
             $('.b-catalog-item__container').css({ 'height': $('.b-catalog-item__container').width() });
@@ -25,7 +25,7 @@ var item = function () {
         }
     }]);
 
-    return item;
+    return Item;
 }();
 
 var City = function () {
@@ -99,6 +99,6 @@ var City = function () {
 }();
 
 $(document).ready(function () {
-    new item();
+    new Item();
     new City();
 });

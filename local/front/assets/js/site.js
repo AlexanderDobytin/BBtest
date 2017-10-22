@@ -1,4 +1,4 @@
-class item {
+class Item {
     constructor() {
         this.height()
         $('.b-catalog-new').stick_in_parent()
@@ -80,7 +80,7 @@ class City {
     }
 }
 $(document).ready(function () {
-    new item()
+    new Item()
     new City()
 
 })
