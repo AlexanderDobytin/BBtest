@@ -1,4 +1,4 @@
-class item {
+class Item {
     constructor() {
         this.height()
         $('.b-catalog-new').stick_in_parent()
@@ -51,27 +51,28 @@ class City {
         });
     }
     add(answer) {
-        let item = `<div class="b-catalog-item col-xs-4">
-            <div style="background: url('`+ answer.link + `') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
-                <div class="b-catalog-item__title">`+ answer.name + `</div>
-                <div class="b-catalog-item__subtitle">`+ answer.city + `</div></a></div>
-          </div>`;
+      let item = this.renderItem(answer)
         $('.b-catalog__list').append(item);
         $.fancybox.close(true);
     }
+    renderItem(answer){
+        let item = `<div class="b-catalog-item col-xs-4">
+        <div style="background: url('`+ answer.link + `') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
+            <div class="b-catalog-item__title">`+ answer.name + `</div>
+            <div class="b-catalog-item__subtitle">`+ answer.city + `</div></a></div>
+      </div>`;
+        return item;
+    }
+
     getList() {
         let that = this
-        let list;
+        let list="";
         $.ajax({
             url: '/place',
             method: "GET",
             success: function (answer) {
                 answer.forEach(function (item, index) {
-                    list += `<div class="b-catalog-item col-xs-4">
-                  <div style="background: url('`+ item.link + `') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">
-                      <div class="b-catalog-item__title">`+ item.name + `</div>
-                      <div class="b-catalog-item__subtitle">`+ item.city + `</div></a></div>
-                </div>`;
+                    list += that.renderItem(item)
 
                 })
                 $('.b-catalog__list').html(list);
@@ -80,7 +81,7 @@ class City {
     }
 }
 $(document).ready(function () {
-    new item()
+    new Item()
     new City()
 
 })

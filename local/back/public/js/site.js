@@ -73,21 +73,27 @@ var City = function () {
     }, {
         key: 'add',
         value: function add(answer) {
-            var item = '<div class="b-catalog-item col-xs-4">\n            <div style="background: url(\'' + answer.link + '\') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">\n                <div class="b-catalog-item__title">' + answer.name + '</div>\n                <div class="b-catalog-item__subtitle">' + answer.city + '</div></a></div>\n          </div>';
+            var item = this.renderItem(answer);
             $('.b-catalog__list').append(item);
             $.fancybox.close(true);
+        }
+    }, {
+        key: 'renderItem',
+        value: function renderItem(answer) {
+            var item = '<div class="b-catalog-item col-xs-4">\n        <div style="background: url(\'' + answer.link + '\') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">\n            <div class="b-catalog-item__title">' + answer.name + '</div>\n            <div class="b-catalog-item__subtitle">' + answer.city + '</div></a></div>\n      </div>';
+            return item;
         }
     }, {
         key: 'getList',
         value: function getList() {
             var that = this;
-            var list = void 0;
+            var list = "";
             $.ajax({
                 url: '/place',
                 method: "GET",
                 success: function success(answer) {
                     answer.forEach(function (item, index) {
-                        list += '<div class="b-catalog-item col-xs-4">\n                  <div style="background: url(\'' + item.link + '\') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">\n                      <div class="b-catalog-item__title">' + item.name + '</div>\n                      <div class="b-catalog-item__subtitle">' + item.city + '</div></a></div>\n                </div>';
+                        list += that.renderItem(item);
                     });
                     $('.b-catalog__list').html(list);
                 }
