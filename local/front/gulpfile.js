@@ -124,15 +124,15 @@ gulp.task('build', function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('../back/assets/css/'))
+        .pipe(gulp.dest('../back/public/css/'))
     gulp.src('./public/css/vendor/*.css')
-        .pipe(gulp.dest('../back/assets/css/vendor/'))
+        .pipe(gulp.dest('../back/public/css/vendor/'))
     // fonts
     gulp.src(['./assets/fonts/**/*'])
-        .pipe(gulp.dest('../back/assets/fonts/')); // записываем fonts
+        .pipe(gulp.dest('../back/public/fonts/')); // записываем fonts
 
     gulp.src(['./public/*.html'])
-        .pipe(gulp.dest('../back/assets/')); // записываем fonts
+        .pipe(gulp.dest('../back/public/')); // записываем fonts
 
     // js
 
@@ -140,15 +140,15 @@ gulp.task('build', function () {
     gulp.src(['./assets/js/*.js'])
         //  .pipe(concat('site.js')) // Собираем все JS, кроме тех которые находятся в ./assets/js/vendor/**
         .pipe(babel({ presets: ['env'] }))
-        .pipe(gulp.dest('../back/assets/js'))
+        .pipe(gulp.dest('../back/public/js'))
     gulp.src(['./public/js/vendor/*.js'])
-        .pipe(gulp.dest('../back/assets/js/vendor'))
+        .pipe(gulp.dest('../back/public/js/vendor'))
 
 
 
     // image
     gulp.src('./public/images/**/*')
-        .pipe(gulp.dest('../back/assets/images'))
+        .pipe(gulp.dest('../back/public/images'))
 
 });
 
