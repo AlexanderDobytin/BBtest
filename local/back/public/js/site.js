@@ -32,11 +32,13 @@ var City = function () {
     function City() {
         _classCallCheck(this, City);
 
+        this.getList();
         var that = this;
         $('.b-catalog-new__submit').on('click', function (event) {
             event.preventDefault();
             $.fancybox.open({
-                src: '#hidden-content' });
+                src: '#hidden-content'
+            });
         });
         $('.b-popUp__form').on('submit', function (event) {
             event.preventDefault();
@@ -48,7 +50,6 @@ var City = function () {
         key: 'submit',
         value: function submit(item) {
             var data = $(item).serializeArray();
-
             var newdata = [];
             data.forEach(function (item, index) {
 
@@ -75,6 +76,22 @@ var City = function () {
             var item = '<div class="b-catalog-item col-xs-4">\n            <div style="background: url(\'' + answer.link + '\') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">\n                <div class="b-catalog-item__title">' + answer.name + '</div>\n                <div class="b-catalog-item__subtitle">' + answer.city + '</div></a></div>\n          </div>';
             $('.b-catalog__list').append(item);
             $.fancybox.close(true);
+        }
+    }, {
+        key: 'getList',
+        value: function getList() {
+            var that = this;
+            var list = void 0;
+            $.ajax({
+                url: '/place',
+                method: "GET",
+                success: function success(answer) {
+                    answer.forEach(function (item, index) {
+                        list += '<div class="b-catalog-item col-xs-4">\n                  <div style="background: url(\'' + item.link + '\') 50% center / cover no-repeat; height: 270px;" class="b-catalog-item__container"><a href="" class="b-catalog-item__textblock">\n                      <div class="b-catalog-item__title">' + item.name + '</div>\n                      <div class="b-catalog-item__subtitle">' + item.city + '</div></a></div>\n                </div>';
+                    });
+                    $('.b-catalog__list').html(list);
+                }
+            });
         }
     }]);
 
