@@ -26,14 +26,17 @@
       </div>
     </header>
     <main>
-      <main class="b-page container-fluid">
+      <div class="b-page container-fluid">
         <section class="b-catalog">
           <h1>Путеводитель </h1>
-          <div class="b-catalog-city"><span>Выберите </span><a href="" class="b-catalog-city__link i-citySelect">город</a>
-            <div class="b-catalog-city__list">
-              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог    </a></div>
-              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог     </a></div>
-              <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a></div>
+          <div class="b-catalog-city"><span>Выберите </span>
+            <div class="b-catalog-city__container">
+              <div class="b-catalog-city__link i-citySelect">город</div>
+              <div class="b-catalog-city__list">
+                <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог    </a></div>
+                <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a><a href="" class="b-catalog-city__city">Санкт-Петербург </a><a href="" class="b-catalog-city__city">Самара</a><a href="" class="b-catalog-city__city">Казань</a><a href="" class="b-catalog-city__city">Таганрог     </a></div>
+                <div class="b-catalog-city__column col-xs-4"><a href="" class="b-catalog-city__city">Минск</a><a href="" class="b-catalog-city__city">Нижний Новгород</a><a href="" class="b-catalog-city__city">Новосибирск</a><a href="" class="b-catalog-city__city">Пермь</a><a href="" class="b-catalog-city__city">Ростов-на-Дону </a></div>
+              </div>
             </div>
           </div>
           <div class="b-catalog__container row">
@@ -82,17 +85,17 @@
           <form role="form" class="b-popUp__form">
             <div class="b-popUp__line form-group">
               <label class="b-popUp__label">Город
-                <input type="text" name="city" class="b-popUp__input form-control">
+                <input type="text" name="city" required class="b-popUp__input form-control">
               </label>
             </div>
             <div class="b-popUp__line form-group">
               <label class="b-popUp__label">Название
-                <input type="text" name="name" class="b-popUp__input form-control">
+                <input type="text" name="name" required class="b-popUp__input form-control">
               </label>
             </div>
             <div class="b-popUp__line form-group">
               <label class="b-popUp__label">Ссылка на картинку
-                <input type="text" name="link" class="b-popUp__input form-control">
+                <input type="text" name="link" required class="b-popUp__input form-control">
               </label>
             </div>
             <div class="b-popUp__line form-group">
@@ -100,7 +103,7 @@
             </div>
           </form>
         </div>
-      </main>
+      </div>
     </main>
   </body>
 </html>

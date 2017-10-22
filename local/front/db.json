@@ -1,14 +1,40 @@
 {
-    "city":[
-        {   "id":1,
-            "name":"Тюмень"
-        },
-        {   "id":2,
-            "name":"Екатеринбург"
-        },
-        {   "id":1,
-            "name":"Москва"
-        }
-    ]
-
+  "place": [
+    {
+      "id": 1,
+      "name": "Mr. Cat",
+      "city": "Ворогеж",
+      "link": "images/catalog-pix-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Челюскинцев",
+      "city": "Воронеж",
+      "link": "images/catalog-pix-2.png"
+    },
+    {
+      "id": 3,
+      "name": "Клуб Полезного Действия",
+      "city": "Санкт-Петербург",
+      "link": "images/catalog-pix-3.png"
+    },
+    {
+      "id": 4,
+      "name": "Freelance Café",
+      "city": "Екатеринбург",
+      "link": "images/catalog-pix-4.png"
+    },
+    {
+      "id": 5,
+      "name": "Лаборатория Касперского",
+      "city": "Новосибирск",
+      "link": "images/catalog-pix-5.png"
+    },
+    {
+      "id": 6,
+      "name": "IT-office",
+      "city": "Кемерово",
+      "link": "images/catalog-pix-6.png"
+    }
+  ]
 }
